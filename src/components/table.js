@@ -36,8 +36,9 @@ export function initTable (settings, onAction) {
         })
     });
 
-    root.addEventListener('submit', (e) => {
+    root.container.addEventListener('submit', (e) => {
         e.preventDefault();
+
         onAction(e.submitter);
     })
 
