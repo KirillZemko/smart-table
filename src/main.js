@@ -47,7 +47,6 @@ const sampleTable = initTable({
 
 // @todo: инициализация
 
-
 const appRoot = document.querySelector('#app');
 appRoot.appendChild(sampleTable.container);
 
