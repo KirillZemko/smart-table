@@ -23,8 +23,13 @@ export function initFiltering(elements, indexes) {
 
     return (data, state, action) => {
         // @todo: #4.2 — обработать очистку поля
+        const { totalFrom, totalTo, ...filters } = state;
+        filters.total = [
+            Number(totalFrom),
+            Number(totalTo)
+        ]
 
         // @todo: #4.5 — отфильтровать данные используя компаратор
-        return data.filter(row => compare(row, state));
+        return data.filter(row => compare(row, filters));
     }
 }
