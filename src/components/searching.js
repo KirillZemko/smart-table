@@ -1,4 +1,4 @@
-import { rules, createComparison, defaultRules } from "../lib/compare.js";
+import { rules, createComparison } from "../lib/compare.js";
 
 
 export function initSearching(searchField) {

@@ -61,7 +61,7 @@ const applySorting = initSorting([               // Нам нужно перед
     sampleTable.header.elements.sortByTotal
 ]);
 
-const applySearching = initSearching(sampleTable.search.elements);
+const applySearching = initSearching('search');
 
 const applyFiltering = initFiltering(sampleTable.filter.elements, {    // передаём элементы фильтра
     searchBySeller: indexes.sellers                                    // для элемента с именем searchBySeller устанавливаем массив продавцов
