@@ -24,10 +24,10 @@ export function initFiltering(elements, indexes) {
     return (data, state, action) => {
         // @todo: #4.2 — обработать очистку поля
         const { totalFrom, totalTo, ...filters } = state;
-        filters.total = [
-            Number(totalFrom),
-            Number(totalTo)
-        ]
+        const from = totalFrom === '' ? '' : Number(totalFrom);
+        const to = totalTo === '' ? '' : Number(totalTo);
+        
+        filters.total = [from, to];
 
         // @todo: #4.5 — отфильтровать данные используя компаратор
         return data.filter(row => compare(row, filters));
