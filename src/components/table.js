@@ -15,13 +15,13 @@ export function initTable (settings, onAction) {
     // @todo: #1.2 —  вывести дополнительные шаблоны до и после таблицы
     [...before].reverse().forEach(templateId => {
         const block = cloneTemplate(templateId);
-
+        root[templateId] = block;
         root.container.prepend(block.container);
     });
 
     [...after].forEach(templateId => {
         const block = cloneTemplate(templateId);
-
+        root[templateId] = block;
         root.container.append(block.container);
     });
 
